@@ -1,0 +1,832 @@
+@charset "utf-8";
+@use "mixins";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #EAEAEA;
+    font-family: 'Avigea';
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: 'Avigea';
+    src: url(fonts/Avigea.ttf);
+}
+@font-face {
+    font-family: 'Caviar Dreams';
+    src: url(fonts/CaviarDreams.ttf);
+}
+
+a, ul {text-decoration: none;}
+
+body {
+    display: grid;
+    grid-template-columns: 6% 94%;
+
+    @include mixins.breakpoint(970px) {
+        grid-template-columns: 100%;
+    }
+}
+
+/* sticky header */
+
+header {
+    position: sticky;
+    top: 0;
+    grid-column: 1 / 2 ;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #080D17;
+    border-right: 5px solid ;
+    border-image: linear-gradient(to bottom, white, #A42C95) 1 100%;
+
+    @include mixins.breakpoint(970px) {
+        flex-direction: row;
+        grid-column: 1/1;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        height: 10vh;
+        padding: 0px 3% 0px 3%;
+        border-right: none;
+        border-bottom: 5px solid;
+        border-image: linear-gradient(to right, #A42C95, #EAEAEA) 1;
+    }
+}
+header li {
+    list-style: none;
+    margin: 5px 0px 5px 0px;
+}
+.fa-bars:last-child {
+    display: none;
+
+    @include mixins.breakpoint(970px) {
+        display: block;
+        font-size: 30px;
+    }
+}
+
+.nav-pages a:first-child li {
+    color: #59BCA4;
+}
+.logo {
+    margin-top: 10px;
+    height: auto;
+    width: 50px;
+
+    @include mixins.breakpoint(970px) {
+        margin-top: 0px;
+    }
+}
+.nom {
+    text-transform: uppercase;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+
+    @include mixins.breakpoint(970px) {
+        display: none;
+    }
+}
+.nav-pages li:hover {
+    color: #59BCA4;
+}
+.nav-pages {
+    @include mixins.breakpoint(970px) {
+        display: none;
+    }
+}
+
+.nav-social {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    height: 17vh;
+    justify-content: space-between;
+
+    @include mixins.breakpoint(970px) {
+        display: none;
+    }
+}
+.nav-social i {
+    font-size: 20px;
+}
+.nav-social i:hover {
+    @include mixins.linearGradient();
+}
+
+/* menu burger */
+
+.fa-bars:hover {
+    @include mixins.linearGradient();
+    cursor: pointer;
+}
+
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 8;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, #A42C95 25%, #59BCA4 78.12%);
+    overflow-y: hidden;
+    transition: 0.5s;
+
+    @media screen and (min-width: 970px) {
+        display: none;
+    }
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    height: 50vh;
+    text-align: center;
+}
+
+.overlay a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #EAEAEA;
+    display: block;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+.overlay a:hover {
+    color: #080D17;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    right: 45px;
+    font-size: 60px;
+}
+
+@include mixins.breakpoint(450px) {
+    .overlay {overflow-y: auto;}
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+}
+
+.socials-burger {
+    position: absolute;
+    bottom: 0;
+    width: 85%;
+    margin-left: 7.5%;
+    display: flex;
+    justify-content: space-between;
+}
+.socials-burger i {
+    font-size: 30px;
+}
+.socials-burger i:hover {
+    cursor: pointer;
+    color: #080D17;
+}
+.rightside-socials {
+    width: 80px;
+    display: flex;
+    justify-content: space-between
+}
+
+/* homepage */
+
+#home {
+    @include mixins.setupSection1-3();
+
+    @include mixins.breakpoint(780px) {
+        min-height: auto;
+    }
+}
+
+.home-navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 50px 0px 50px;
+}
+
+main {
+    grid-column: 2 / 3 ;
+    min-height: 100vh;
+
+    @include mixins.breakpoint(970px) {
+        grid-column: 1/1;
+        position: relative;
+    }
+}
+
+h1 {
+    color: #A42C95;
+    font-weight: 400;
+    font-size: 36px;
+    letter-spacing: 0.31em;
+    padding-top: 18px;
+}
+
+nav {
+    padding-top: 20px;
+    width: 38%;
+
+    @include mixins.breakpoint(970px) {
+        display: none;
+    }
+}
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    font-size: 18px;
+}
+// nav li {
+//     position: relative;
+// }
+// nav li::before {
+//     // text-decoration: underline;
+//     // text-underline-offset: 15px;
+//     content: '';
+//     position: absolute;
+//     bottom: -5px;
+//     left: 0;
+//     border-bottom: solid 2px #EAEAEA;
+//     width: 50%;
+// }
+
+nav li {
+    display: inline-block;
+    position: relative;
+    color: #EAEAEA;
+  }
+  
+nav li:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(100deg, #A42C95 30.5%, #59BCA4 71.46%);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+nav li:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+nav li:hover {
+    @include mixins.linearGradient();
+}
+
+.presentation {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 50px 0px 50px;
+
+    @include mixins.breakpoint(780px) {
+        display: inline-block;
+    }
+}
+.sd {
+    margin-top: 22vh;
+}
+.sd p:first-child {
+    font-size: 30px;
+
+    @include mixins.breakpoint(880px) {
+        font-size: 22px;
+    }
+}
+.sd h2 {
+    font-size: 50px;
+
+    @include mixins.breakpoint(1080px) {
+        font-size: 36px;
+    }
+    @include mixins.breakpoint(880px) {
+        font-size: 30px;
+        margin-left: 0;
+    }
+}
+.sd p:last-child {
+    color: #59BCA4;
+    text-transform: uppercase;
+    font-size: 68px;
+    margin-top: 22px;
+
+    @include mixins.breakpoint(1080px) {
+        font-size: 50px;
+    }
+    @include mixins.breakpoint(880px) {
+        font-size: 40px;
+    }
+}
+
+.portrait {
+    margin-top: 15vh;
+    margin-right: 35px;
+}
+
+.image-cercle {
+    background-size: cover;
+    background-position: 50% 50%; 
+    background-image: url(media/portrait.jpg);
+    display: inline-block;
+    width: 300px; 
+    height: 300px;
+    border: none;
+    outline: 4px solid #59BCA4;
+    -moz-border-radius: 150px;
+    -webkit-border-radius: 150px;
+    border-radius: 150px;
+
+    @include mixins.breakpoint(880px) {
+        width: 250px; 
+        height: 250px;
+        -moz-border-radius: 125px;
+        -webkit-border-radius: 125px;
+        border-radius: 125px;
+    }
+}
+
+        /* ----- CSS animation logo mouse scroll ----- */
+
+.icon-scroll {
+	position: absolute;
+	bottom: 4%;
+	left: 50%;
+    /* width: 1em;
+	height: 3.125em; */
+	transform: translateX(-50%) scale(2);
+	z-index: 9;
+}
+
+/* .icon-arrows::after, .icon-arrows::before {
+    content: '';
+}
+.icon-arrows span,
+.icon-arrows::after, .icon-arrows::before {
+	display: block;
+	width: 0.315em;
+	height: 0.315em;
+	border-right: 1px solid rgba(255,255,255,.8);
+	border-bottom: 1px solid rgba(255,255,255,.8);
+	margin: 0 0 0.125em 0.315em;
+	transform: rotate(45deg);
+    animation: mouse-scroll 1s infinite;
+	animation-direction: alternate;
+} */
+
+/* .icon-arrows::before {
+	margin-top: 0.315em;
+	animation-delay: .1s;
+} */
+
+.icon-scroll span {
+	animation-delay: .2s;
+}
+
+/* .icon-arrows::after {
+	animation-delay: .3s;
+} */
+
+.icon-scroll .mouse {
+	height: 1.375em;
+	width: .875em;
+	border: 1px solid rgba(255,255,255,.8);
+	border-radius: 2em;
+}
+
+.icon-scroll .wheel {
+    position: relative;
+    display: block;
+    height: 0.1875em;
+    width: 0.1875em;
+    margin: 0.1875em auto 0;
+    background: rgba(255,255,255,.8);
+    animation: mouse-wheel 1.2s ease infinite;
+    border-radius: 50%;
+}
+
+@keyframes mouse-wheel {
+	0% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	100% {
+		opacity: 0;
+		transform: translateY(.375em);
+	}
+}
+
+@keyframes mouse-scroll {
+	0%   { opacity: 0; }
+	50%  { opacity: .5; }
+	100% { opacity: 1; }
+}
+
+/* About Me */
+
+#about-me {
+    @include mixins.setupSection2-4();
+}
+
+.about-me-title-section {
+    @include mixins.barreTitre();
+    @include mixins.breakpoint(880px) {
+        justify-content: start;
+    }
+}
+
+.am-description {
+    margin: 30px 50px 0px 50px;
+    position: relative;
+    height: 30vh;
+}
+.am-description p {
+    font-family: 'Caviar Dreams';
+    text-align: justify;
+    width: 55%;
+
+    @include mixins.breakpoint(1060px) {
+        font-size: 14px;
+    }
+}
+.am-description p:last-child {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-top: 20px;
+}
+
+.skills {
+    margin: 0px 50px 0px 50px;
+}
+.skills h3 {
+    font-size: 55px;
+    text-transform: uppercase;
+
+    @include mixins.breakpoint(1060px) {
+        font-size: 50px;
+    }
+}
+.section-skills {
+    display: flex;
+    justify-content: space-between;
+}
+.section-skills i {
+    font-size: 60px;
+    margin-top: 18px;
+
+    @include mixins.breakpoint(1060px) {
+        font-size: 52px;
+    }
+}
+.skills1 {
+    width: 45%;
+}
+.skills1 div {
+    display: flex;
+    justify-content: space-between;
+}
+.skills2 {
+    width: 40%;
+}
+h4 {
+    color: #59BCA4;
+    font-size: 27px;
+
+    @include mixins.breakpoint(1060px) {
+        font-size: 22px;
+    }
+}
+.skills2 i, .skills2 img {
+    margin-right: 15px;
+}
+
+/* Projects */
+
+#projects {
+    @include mixins.setupSection1-3();
+}
+
+.projects-title-section {
+    @include mixins.barreTitre();
+    @include mixins.breakpoint(880px) {
+        justify-content: start;
+    }
+}
+.projects-title-section hr {
+    background-color: #A42C95;
+}
+
+.projects-main {
+    margin: 55px 50px 0px 50px;
+    height: 65vh;
+    display: flex;
+    justify-content: space-between;
+}
+.project-description {
+    width: 50%;
+    position: relative;
+}
+.project-description p {
+    font-family: 'Caviar Dreams';
+    text-align: justify;
+    margin-top: 18px;
+
+    @include mixins.breakpoint(1150px) {
+        font-size: 14px;
+    }
+}
+.project-description h3 {
+    font-style: italic;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 15px;
+
+    @include mixins.breakpoint(1150px) {
+        font-size: 35px;
+    }
+}
+.pd {
+    display: none;
+}
+.pd-active {
+    display: block;
+}
+.more {
+    border: none;
+    text-transform: uppercase;
+    border-radius: 10px;
+    padding: 5px 0px 5px 0px;
+    background: linear-gradient(100deg, #A42C95 30.5%, #59BCA4 71.46%);
+    position: absolute;
+    bottom: 5px;
+    width: 30%;
+    margin-left: 35%;
+    text-align: center;
+}
+.projects-swiper {
+    background-color: #A42C95;
+    width: 45%;
+    overflow: hidden;
+}
+
+/* Contact */
+
+#contact {
+    @include mixins.setupSection2-4();
+
+    @include mixins.breakpoint(780px) {
+        min-height: auto;
+        background: linear-gradient(330.65deg, #59BCA4 6.8%, rgba(164, 44, 149, 0.74) 24.18%, #080D17 37.26%);
+    }
+}
+
+.contact-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 65vh;
+    margin: 40px 50px 0px 50px;
+
+    @include mixins.breakpoint(780px) {
+        height: auto;
+        gap: 35px;
+    }
+}
+
+.contact-intro {
+    font-family: 'Caviar Dreams';
+    text-align: justify
+}
+
+.contact-title-section {
+    @include mixins.barreTitre();
+    @include mixins.breakpoint(880px) {
+        justify-content: start;
+    }
+}
+
+hr {
+    width: 80%;
+    height: 4px;
+    background-color: #59BCA4;
+    border: none;
+
+    @include mixins.breakpoint(880px) {
+        width: 25%;
+    }
+}
+
+h2 {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 30px;
+
+    @include mixins.breakpoint(880px) {
+        font-size: 25px;
+        margin-left: 15px;
+    }
+}
+
+.contact-main h3 {
+    text-transform: uppercase;
+    font-size: 50px;
+    text-align: center;
+
+    @include mixins.breakpoint(780px) {
+        font-size: 40px;
+    }
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-evenly;
+
+    @include mixins.breakpoint(780px) {
+        display: inline-block;
+    }
+}
+.card {
+    @include mixins.breakpoint(780px) {
+        display: flex;
+        gap: 10%;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+}
+.card i {
+    font-size: 70px;
+
+    @include mixins.breakpoint(780px) {
+        font-size: 50px;
+    }
+}
+.card p {
+    font-size: 18px;
+}
+.card i:hover {
+    @include mixins.linearGradient();
+}
+.logo-contact {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+
+    @include mixins.breakpoint(780px) {
+        align-content: center;
+        margin-bottom: 0;
+    }
+}
+
+.copyright {
+    position: absolute;
+    bottom: 10px;
+    right: 18px;
+    font-family: 'Caviar Dreams';
+    font-style: italic;
+    font-size: 13px;
+
+    @include mixins.breakpoint(780px) {
+        position: relative;
+        bottom: 0;
+        right: 0;
+        margin-top: 30px;
+        text-align: center;
+    }
+}
+
+/* css scrollbar */
+/* ! le webkit ne fonctionne pas sur firefox ni edge */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background-color: #080D17;
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(120deg, #A42C95 30.5%, #59BCA4 71.46%);
+    border-radius: 4px;
+}
+
+
+
+
+
+
+
+// swiper projects
+
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #EAEAEA;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #EAEAEA;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 2px;
+  background-color: #080D17;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+
+//   position: absolute;
+//   bottom: 8px;
+}
+
+.active, .dot:hover {
+  background-color: #59BCA4;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}

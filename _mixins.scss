@@ -1,0 +1,38 @@
+@mixin linearGradient() {
+    background-image: linear-gradient(100deg, #A42C95 30.5%, #59BCA4 71.46%);
+    background-size: 100%;
+    background-clip: text;
+    // pour le navigateur chrome
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    // pour le navigateur mozilla firefox
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+
+    /* fallback */
+    background-color: #080D17;
+}
+
+@mixin setupSection1-3 {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(330.65deg, #59BCA4 6.8%, rgba(164, 44, 149, 0.74) 24.18%, #080D17 37.26%);
+}
+@mixin setupSection2-4 {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(209.07deg, #59BCA4 6.8%, rgba(164, 44, 149, 0.74) 24.18%, #080D17 37.26%);
+}
+
+@mixin barreTitre {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px 0px 50px;
+}
+
+@mixin breakpoint($width) {
+    @media screen and (max-width: $width) {
+        @content;
+    }
+}
