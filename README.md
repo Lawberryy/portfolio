@@ -19,9 +19,12 @@ Then if you commit & push once more, a new branch is supposed to be added on the
 
 5. I went through the marketplace again to find other interesting extensions (in my opinion) to install for my repo.
 
---> The first one I chose was the "Binoculars Action" app, to help me improve the SEO aspect of my code & website.
+--> The first one I chose was the recommended app "WhiteSource Bolt Mend", to improve the security aspect.
 
---> To improve the security aspect, I installed the recommended app "WhiteSource Bolt".
-
---> To improve workflow & code management, I installed the "Codetree" app.
+--> To improve workflow & code management, I installed the "CodeFactor" app.
 If I have issues in several repositories, I can now have access to them all in one dashboard.
+
+
+6. Finally, I created an account on Zapier and I created two zap between Github & Discord.
+The first one is the mandatory one : Create a bot that notify you (send a message in the Discord channel of my server) when a new commit is done.
+The second one create a bot that also send a message when a new repository is created.
