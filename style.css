@@ -73,10 +73,6 @@ header li {
   }
 }
 
-.nav-pages a:first-child li {
-  color: #59BCA4;
-}
-
 .logo {
   margin-top: 10px;
   height: auto;
@@ -100,7 +96,7 @@ header li {
   }
 }
 
-.nav-pages li:hover {
+.nav-pages a:hover {
   color: #59BCA4;
 }
 
