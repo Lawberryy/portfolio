@@ -209,6 +209,8 @@ header li {
 
     @include mixins.breakpoint(780px) {
         min-height: auto;
+        padding-bottom: 90px;
+        background: url(media/fond_etoiles.gif);
     }
 }
 
@@ -216,6 +218,10 @@ header li {
     display: flex;
     justify-content: space-between;
     padding: 0px 50px 0px 50px;
+
+    @include mixins.breakpoint(780px) {
+        justify-content: center;
+    }
 }
 
 main {
@@ -268,8 +274,8 @@ nav li {
     display: inline-block;
     position: relative;
     color: #EAEAEA;
-  }
-  
+    }
+
 nav li:after {
     content: '';
     position: absolute;
@@ -281,12 +287,12 @@ nav li:after {
     background: linear-gradient(100deg, #A42C95 30.5%, #59BCA4 71.46%);
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
-  }
-  
+    }
+
 nav li:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
-  }
+    }
 
 nav li:hover {
     @include mixins.linearGradient();
@@ -298,11 +304,17 @@ nav li:hover {
     margin: 0px 50px 0px 50px;
 
     @include mixins.breakpoint(780px) {
-        display: inline-block;
+        flex-direction: column-reverse;
+        align-items: center;
     }
 }
 .sd {
     margin-top: 22vh;
+
+    @include mixins.breakpoint(780px) {
+        margin-top: 50px;
+        text-align: center;
+    }
 }
 .sd p:first-child {
     font-size: 30px;
@@ -339,6 +351,11 @@ nav li:hover {
 .portrait {
     margin-top: 15vh;
     margin-right: 35px;
+
+    @include mixins.breakpoint(780px) {
+        margin-top: 60px;
+        margin-right: 0;
+    }
 }
 
 .image-cercle {
@@ -373,6 +390,10 @@ nav li:hover {
 	height: 3.125em; */
 	transform: translateX(-50%) scale(2);
 	z-index: 9;
+
+    @include mixins.breakpoint(780px) {
+        display: none;
+    }
 }
 
 /* .icon-arrows::after, .icon-arrows::before {
@@ -444,6 +465,11 @@ nav li:hover {
 
 #about-me {
     @include mixins.setupSection2-4();
+
+    @include mixins.breakpoint(780px) {
+        background: #080D17;
+        padding-bottom: 90px;
+    }
 }
 
 .about-me-title-section {
@@ -457,6 +483,11 @@ nav li:hover {
     margin: 30px 50px 0px 50px;
     position: relative;
     height: 30vh;
+
+    @include mixins.breakpoint(780px) {
+        height: auto;
+        margin-bottom: 50px;
+    }
 }
 .am-description p {
     font-family: 'Caviar Dreams';
@@ -466,12 +497,20 @@ nav li:hover {
     @include mixins.breakpoint(1060px) {
         font-size: 14px;
     }
+
+    @include mixins.breakpoint(780px) {
+        width: 100%;
+    }
 }
 .am-description p:last-child {
     position: absolute;
     right: 0;
     bottom: 0;
     margin-top: 20px;
+
+    @include mixins.breakpoint(780px) {
+        position: relative;
+    }
 }
 
 .skills {
@@ -488,6 +527,10 @@ nav li:hover {
 .section-skills {
     display: flex;
     justify-content: space-between;
+
+    @include mixins.breakpoint(780px) {
+        flex-direction: column;
+    }
 }
 .section-skills i {
     font-size: 60px;
@@ -499,6 +542,10 @@ nav li:hover {
 }
 .skills1 {
     width: 45%;
+
+    @include mixins.breakpoint(780px) {
+        width: 100%;
+    }
 }
 .skills1 div {
     display: flex;
@@ -506,6 +553,10 @@ nav li:hover {
 }
 .skills2 {
     width: 40%;
+
+    @include mixins.breakpoint(780px) {
+        width: 100%;
+    }
 }
 h4 {
     color: #59BCA4;
@@ -513,6 +564,10 @@ h4 {
 
     @include mixins.breakpoint(1060px) {
         font-size: 22px;
+    }
+
+    @include mixins.breakpoint(780px) {
+        margin-top: 30px;
     }
 }
 .skills2 i, .skills2 img {
@@ -523,6 +578,12 @@ h4 {
 
 #projects {
     @include mixins.setupSection1-3();
+
+    @include mixins.breakpoint(780px) {
+        // min-height: auto;
+        background: url(media/fond_etoiles.gif);
+        padding-bottom: 90px;
+    }
 }
 
 .projects-title-section {
@@ -540,10 +601,20 @@ h4 {
     height: 65vh;
     display: flex;
     justify-content: space-between;
+
+    @include mixins.breakpoint(780px) {
+        flex-direction: column-reverse;
+        height: auto;
+        margin: 40px 50px 0px 50px;
+    }
 }
 .project-description {
     width: 50%;
     position: relative;
+
+    @include mixins.breakpoint(780px) {
+        width: 100%;
+    }
 }
 .project-description p {
     font-family: 'Caviar Dreams';
@@ -569,6 +640,9 @@ h4 {
 .pd {
     display: none;
 }
+.pd div {
+    margin-bottom: 50px;
+}
 .pd-active {
     display: block;
 }
@@ -583,11 +657,22 @@ h4 {
     width: 30%;
     margin-left: 35%;
     text-align: center;
+
+    @include mixins.breakpoint(780px) {
+        position: relative;
+        bottom: 0;
+        padding: 5px 10px 5px 10px;
+    }
 }
 .projects-swiper {
     background-color: #A42C95;
     width: 45%;
     overflow: hidden;
+
+    @include mixins.breakpoint(780px) {
+        width: 100%;
+        margin-bottom: 30px;
+    }
 }
 
 /* Contact */
@@ -723,6 +808,10 @@ h2 {
 }
 ::-webkit-scrollbar-track {
     background-color: #080D17;
+
+    @include mixins.breakpoint(780px) {
+        background: black;
+    }
 }
 ::-webkit-scrollbar-thumb {
     background: linear-gradient(120deg, #A42C95 30.5%, #59BCA4 71.46%);

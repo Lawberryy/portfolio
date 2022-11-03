@@ -240,6 +240,8 @@ header li {
 @media screen and (max-width: 780px) {
   #home {
     min-height: auto;
+    padding-bottom: 90px;
+    background: url(media/fond_etoiles.gif);
   }
 }
 
@@ -247,6 +249,11 @@ header li {
   display: flex;
   justify-content: space-between;
   padding: 0px 50px 0px 50px;
+}
+@media screen and (max-width: 780px) {
+  .home-navbar {
+    justify-content: center;
+  }
 }
 
 main {
@@ -328,12 +335,19 @@ nav li:hover {
 }
 @media screen and (max-width: 780px) {
   .presentation {
-    display: inline-block;
+    flex-direction: column-reverse;
+    align-items: center;
   }
 }
 
 .sd {
   margin-top: 22vh;
+}
+@media screen and (max-width: 780px) {
+  .sd {
+    margin-top: 50px;
+    text-align: center;
+  }
 }
 
 .sd p:first-child {
@@ -381,6 +395,12 @@ nav li:hover {
   margin-top: 15vh;
   margin-right: 35px;
 }
+@media screen and (max-width: 780px) {
+  .portrait {
+    margin-top: 60px;
+    margin-right: 0;
+  }
+}
 
 .image-cercle {
   background-size: cover;
@@ -414,6 +434,11 @@ nav li:hover {
   height: 3.125em; */
   transform: translateX(-50%) scale(2);
   z-index: 9;
+}
+@media screen and (max-width: 780px) {
+  .icon-scroll {
+    display: none;
+  }
 }
 
 /* .icon-arrows::after, .icon-arrows::before {
@@ -487,6 +512,12 @@ nav li:hover {
   min-height: 100vh;
   background: linear-gradient(209.07deg, #59BCA4 6.8%, rgba(164, 44, 149, 0.74) 24.18%, #080D17 37.26%);
 }
+@media screen and (max-width: 780px) {
+  #about-me {
+    background: #080D17;
+    padding-bottom: 90px;
+  }
+}
 
 .about-me-title-section {
   display: flex;
@@ -505,6 +536,12 @@ nav li:hover {
   position: relative;
   height: 30vh;
 }
+@media screen and (max-width: 780px) {
+  .am-description {
+    height: auto;
+    margin-bottom: 50px;
+  }
+}
 
 .am-description p {
   font-family: "Caviar Dreams";
@@ -516,12 +553,22 @@ nav li:hover {
     font-size: 14px;
   }
 }
+@media screen and (max-width: 780px) {
+  .am-description p {
+    width: 100%;
+  }
+}
 
 .am-description p:last-child {
   position: absolute;
   right: 0;
   bottom: 0;
   margin-top: 20px;
+}
+@media screen and (max-width: 780px) {
+  .am-description p:last-child {
+    position: relative;
+  }
 }
 
 .skills {
@@ -542,6 +589,11 @@ nav li:hover {
   display: flex;
   justify-content: space-between;
 }
+@media screen and (max-width: 780px) {
+  .section-skills {
+    flex-direction: column;
+  }
+}
 
 .section-skills i {
   font-size: 60px;
@@ -556,6 +608,11 @@ nav li:hover {
 .skills1 {
   width: 45%;
 }
+@media screen and (max-width: 780px) {
+  .skills1 {
+    width: 100%;
+  }
+}
 
 .skills1 div {
   display: flex;
@@ -565,6 +622,11 @@ nav li:hover {
 .skills2 {
   width: 40%;
 }
+@media screen and (max-width: 780px) {
+  .skills2 {
+    width: 100%;
+  }
+}
 
 h4 {
   color: #59BCA4;
@@ -573,6 +635,11 @@ h4 {
 @media screen and (max-width: 1060px) {
   h4 {
     font-size: 22px;
+  }
+}
+@media screen and (max-width: 780px) {
+  h4 {
+    margin-top: 30px;
   }
 }
 
@@ -585,6 +652,12 @@ h4 {
   position: relative;
   min-height: 100vh;
   background: linear-gradient(330.65deg, #59BCA4 6.8%, rgba(164, 44, 149, 0.74) 24.18%, #080D17 37.26%);
+}
+@media screen and (max-width: 780px) {
+  #projects {
+    background: url(media/fond_etoiles.gif);
+    padding-bottom: 90px;
+  }
 }
 
 .projects-title-section {
@@ -609,10 +682,22 @@ h4 {
   display: flex;
   justify-content: space-between;
 }
+@media screen and (max-width: 780px) {
+  .projects-main {
+    flex-direction: column-reverse;
+    height: auto;
+    margin: 40px 50px 0px 50px;
+  }
+}
 
 .project-description {
   width: 50%;
   position: relative;
+}
+@media screen and (max-width: 780px) {
+  .project-description {
+    width: 100%;
+  }
 }
 
 .project-description p {
@@ -644,6 +729,10 @@ h4 {
   display: none;
 }
 
+.pd div {
+  margin-bottom: 50px;
+}
+
 .pd-active {
   display: block;
 }
@@ -660,11 +749,24 @@ h4 {
   margin-left: 35%;
   text-align: center;
 }
+@media screen and (max-width: 780px) {
+  .more {
+    position: relative;
+    bottom: 0;
+    padding: 5px 10px 5px 10px;
+  }
+}
 
 .projects-swiper {
   background-color: #A42C95;
   width: 45%;
   overflow: hidden;
+}
+@media screen and (max-width: 780px) {
+  .projects-swiper {
+    width: 100%;
+    margin-bottom: 30px;
+  }
 }
 
 /* Contact */
@@ -828,6 +930,11 @@ h2 {
 
 ::-webkit-scrollbar-track {
   background-color: #080D17;
+}
+@media screen and (max-width: 780px) {
+  ::-webkit-scrollbar-track {
+    background: black;
+  }
 }
 
 ::-webkit-scrollbar-thumb {
