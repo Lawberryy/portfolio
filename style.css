@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   color: #EAEAEA;
-  font-family: "Avigea";
+  font-family: "Avigea", "Courier New", "Arial";
   scroll-behavior: smooth;
 }
 
@@ -110,7 +110,7 @@ header li {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
-  height: 17vh;
+  gap: 10px;
   justify-content: space-between;
 }
 @media screen and (max-width: 970px) {
@@ -231,7 +231,7 @@ header li {
   justify-content: space-between;
 }
 
-/* homepage */
+/* <-------- home section --------> */
 #home {
   position: relative;
   min-height: 100vh;
@@ -246,8 +246,7 @@ header li {
 }
 
 .home-navbar {
-  display: flex;
-  justify-content: space-between;
+  position: relative;
   padding: 0px 50px 0px 50px;
 }
 @media screen and (max-width: 780px) {
@@ -272,12 +271,28 @@ h1 {
   font-weight: 400;
   font-size: 36px;
   letter-spacing: 0.31em;
-  padding-top: 18px;
+  padding-top: 20px;
+  position: absolute;
 }
 
+.glow {
+  color: #fff;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #59BCA4, 0 0 40px #59BCA4, 0 0 50px #59BCA4, 0 0 60px #59BCA4, 0 0 70px #59BCA4, 0 0 80px #59BCA4;
+  }
+}
 nav {
-  padding-top: 20px;
+  padding-top: 30px;
   width: 38%;
+  position: absolute;
+  right: 50px;
 }
 @media screen and (max-width: 970px) {
   nav {
@@ -332,6 +347,7 @@ nav li:hover {
   display: flex;
   justify-content: space-between;
   margin: 0px 50px 0px 50px;
+  padding-top: 12vh;
 }
 @media screen and (max-width: 780px) {
   .presentation {
@@ -414,6 +430,7 @@ nav li:hover {
   -moz-border-radius: 150px;
   -webkit-border-radius: 150px;
   border-radius: 150px;
+  transition: transform 0.2s; /* Animation (rendre la transition plus smooth) */
 }
 @media screen and (max-width: 880px) {
   .image-cercle {
@@ -425,13 +442,15 @@ nav li:hover {
   }
 }
 
-/* ----- CSS animation logo mouse scroll ----- */
+.image-cercle:hover {
+  transform: scale(1.2); /* (120% zoom) */
+}
+
+/* <----- CSS animation logo mouse scroll -----> */
 .icon-scroll {
   position: absolute;
   bottom: 4%;
   left: 50%;
-  /* width: 1em;
-  height: 3.125em; */
   transform: translateX(-50%) scale(2);
   z-index: 9;
 }
@@ -441,32 +460,6 @@ nav li:hover {
   }
 }
 
-/* .icon-arrows::after, .icon-arrows::before {
-    content: '';
-}
-.icon-arrows span,
-.icon-arrows::after, .icon-arrows::before {
-	display: block;
-	width: 0.315em;
-	height: 0.315em;
-	border-right: 1px solid rgba(255,255,255,.8);
-	border-bottom: 1px solid rgba(255,255,255,.8);
-	margin: 0 0 0.125em 0.315em;
-	transform: rotate(45deg);
-    animation: mouse-scroll 1s infinite;
-	animation-direction: alternate;
-} */
-/* .icon-arrows::before {
-	margin-top: 0.315em;
-	animation-delay: .1s;
-} */
-.icon-scroll span {
-  animation-delay: 0.2s;
-}
-
-/* .icon-arrows::after {
-	animation-delay: .3s;
-} */
 .icon-scroll .mouse {
   height: 1.375em;
   width: 0.875em;
@@ -506,7 +499,7 @@ nav li:hover {
     opacity: 1;
   }
 }
-/* About Me */
+/* <---------- About Me ----------> */
 #about-me {
   position: relative;
   min-height: 100vh;
@@ -614,9 +607,39 @@ nav li:hover {
   }
 }
 
-.skills1 div {
+.langages {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.langages div:nth-of-type(1) i:hover {
+  color: #e34c26;
+}
+
+.langages div:nth-of-type(2) i:hover {
+  color: #2965f1;
+}
+
+.langages div:nth-of-type(3) i:hover {
+  color: #f0db4f;
+}
+
+.langages div:nth-of-type(4) i:hover {
+  color: #8993be;
+}
+
+.langages div:nth-of-type(5) i:hover {
+  color: #00749c;
+}
+
+.langages div {
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.langages div:hover {
+  transform: scale(1.2);
 }
 
 .skills2 {
@@ -626,6 +649,29 @@ nav li:hover {
   .skills2 {
     width: 100%;
   }
+}
+
+.softwares {
+  display: flex;
+  align-items: flex-end;
+}
+
+.softwares div {
+  text-align: center;
+  margin-right: 22px;
+  transition: transform 0.2s;
+}
+
+.softwares div:hover {
+  transform: scale(1.2);
+}
+
+.softwares div i {
+  text-align: center;
+}
+
+.softwares i:hover {
+  color: #A259FF;
 }
 
 h4 {
@@ -643,11 +689,7 @@ h4 {
   }
 }
 
-.skills2 i, .skills2 img {
-  margin-right: 15px;
-}
-
-/* Projects */
+/* <------- Projects -------> */
 #projects {
   position: relative;
   min-height: 100vh;
@@ -758,7 +800,6 @@ h4 {
 }
 
 .projects-swiper {
-  background-color: #A42C95;
   width: 45%;
   overflow: hidden;
 }
@@ -767,179 +808,6 @@ h4 {
     width: 100%;
     margin-bottom: 30px;
   }
-}
-
-/* Contact */
-#contact {
-  position: relative;
-  min-height: 100vh;
-  background: linear-gradient(209.07deg, #59BCA4 6.8%, rgba(164, 44, 149, 0.74) 24.18%, #080D17 37.26%);
-}
-@media screen and (max-width: 780px) {
-  #contact {
-    min-height: auto;
-    background: linear-gradient(330.65deg, #59BCA4 6.8%, rgba(164, 44, 149, 0.74) 24.18%, #080D17 37.26%);
-  }
-}
-
-.contact-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 65vh;
-  margin: 40px 50px 0px 50px;
-}
-@media screen and (max-width: 780px) {
-  .contact-main {
-    height: auto;
-    gap: 35px;
-  }
-}
-
-.contact-intro {
-  font-family: "Caviar Dreams";
-  text-align: justify;
-}
-
-.contact-title-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 50px 0px 50px;
-}
-@media screen and (max-width: 880px) {
-  .contact-title-section {
-    justify-content: start;
-  }
-}
-
-hr {
-  width: 80%;
-  height: 4px;
-  background-color: #59BCA4;
-  border: none;
-}
-@media screen and (max-width: 880px) {
-  hr {
-    width: 25%;
-  }
-}
-
-h2 {
-  text-transform: uppercase;
-  font-weight: 400;
-  font-size: 30px;
-}
-@media screen and (max-width: 880px) {
-  h2 {
-    font-size: 25px;
-    margin-left: 15px;
-  }
-}
-
-.contact-main h3 {
-  text-transform: uppercase;
-  font-size: 50px;
-  text-align: center;
-}
-@media screen and (max-width: 780px) {
-  .contact-main h3 {
-    font-size: 40px;
-  }
-}
-
-.contact-info {
-  display: flex;
-  justify-content: space-evenly;
-}
-@media screen and (max-width: 780px) {
-  .contact-info {
-    display: inline-block;
-  }
-}
-
-@media screen and (max-width: 780px) {
-  .card {
-    display: flex;
-    gap: 10%;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-}
-
-.card i {
-  font-size: 70px;
-}
-@media screen and (max-width: 780px) {
-  .card i {
-    font-size: 50px;
-  }
-}
-
-.card p {
-  font-size: 18px;
-}
-
-.card i:hover {
-  background-image: linear-gradient(100deg, #A42C95 30.5%, #59BCA4 71.46%);
-  background-size: 100%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
-  /* fallback */
-  background-color: #080D17;
-}
-
-.logo-contact {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 30px;
-}
-@media screen and (max-width: 780px) {
-  .logo-contact {
-    align-content: center;
-    margin-bottom: 0;
-  }
-}
-
-.copyright {
-  position: absolute;
-  bottom: 10px;
-  right: 18px;
-  font-family: "Caviar Dreams";
-  font-style: italic;
-  font-size: 13px;
-}
-@media screen and (max-width: 780px) {
-  .copyright {
-    position: relative;
-    bottom: 0;
-    right: 0;
-    margin-top: 30px;
-    text-align: center;
-  }
-}
-
-/* css scrollbar */
-/* ! le webkit ne fonctionne pas sur firefox ni edge */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background-color: #080D17;
-}
-@media screen and (max-width: 780px) {
-  ::-webkit-scrollbar-track {
-    background: black;
-  }
-}
-
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(120deg, #A42C95 30.5%, #59BCA4 71.46%);
-  border-radius: 4px;
 }
 
 * {
@@ -1048,6 +916,189 @@ img {
   .prev, .next, .text {
     font-size: 11px;
   }
+}
+/* <------ Contact ------> */
+#contact {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(209.07deg, #59BCA4 6.8%, rgba(164, 44, 149, 0.74) 24.18%, #080D17 37.26%);
+}
+@media screen and (max-width: 780px) {
+  #contact {
+    min-height: auto;
+    background: linear-gradient(330.65deg, #59BCA4 6.8%, rgba(164, 44, 149, 0.74) 24.18%, #080D17 37.26%);
+  }
+}
+
+.contact-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 65vh;
+  margin: 40px 50px 0px 50px;
+}
+@media screen and (max-width: 780px) {
+  .contact-main {
+    height: auto;
+    gap: 35px;
+  }
+}
+
+.contact-intro {
+  font-family: "Caviar Dreams";
+  text-align: center;
+  font-size: 20px;
+}
+@media screen and (max-width: 780px) {
+  .contact-intro {
+    font-size: 17px;
+  }
+}
+
+.contact-title-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px 0px 50px;
+}
+@media screen and (max-width: 880px) {
+  .contact-title-section {
+    justify-content: start;
+  }
+}
+
+hr {
+  width: 80%;
+  height: 4px;
+  background-color: #59BCA4;
+  border: none;
+}
+@media screen and (max-width: 880px) {
+  hr {
+    width: 25%;
+  }
+}
+
+h2 {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 30px;
+}
+@media screen and (max-width: 880px) {
+  h2 {
+    font-size: 25px;
+    margin-left: 15px;
+  }
+}
+
+.contact-main h3 {
+  text-transform: uppercase;
+  font-size: 50px;
+  text-align: center;
+}
+@media screen and (max-width: 780px) {
+  .contact-main h3 {
+    font-size: 40px;
+  }
+}
+
+.contact-info {
+  display: flex;
+  justify-content: space-evenly;
+}
+@media screen and (max-width: 780px) {
+  .contact-info {
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .card {
+    display: flex;
+    gap: 10%;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+}
+
+.card i {
+  font-size: 70px;
+}
+@media screen and (max-width: 780px) {
+  .card i {
+    font-size: 50px;
+  }
+}
+
+.card p {
+  font-size: 18px;
+}
+
+.card i:hover {
+  background-image: linear-gradient(100deg, #A42C95 30.5%, #59BCA4 71.46%);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  /* fallback */
+  background-color: #080D17;
+}
+
+.logo-contact {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  transition: transform 0.2s;
+}
+@media screen and (max-width: 780px) {
+  .logo-contact {
+    align-content: center;
+    margin-bottom: 0;
+  }
+}
+
+.logo-contact:hover {
+  transform: scale(1.2);
+}
+
+.copyright {
+  position: absolute;
+  bottom: 10px;
+  right: 18px;
+  font-family: "Caviar Dreams";
+  font-style: italic;
+  font-size: 13px;
+}
+@media screen and (max-width: 780px) {
+  .copyright {
+    position: relative;
+    bottom: 0;
+    right: 0;
+    margin-top: 30px;
+    text-align: center;
+  }
+}
+
+/* <------ scrollbar -------> */
+/* ! le webkit ne fonctionne pas sur firefox ni edge */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #080D17;
+}
+@media screen and (max-width: 780px) {
+  ::-webkit-scrollbar-track {
+    background: black;
+  }
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(120deg, #A42C95 30.5%, #59BCA4 71.46%);
+  border-radius: 4px;
 }
 
 /*# sourceMappingURL=style.css.map */
