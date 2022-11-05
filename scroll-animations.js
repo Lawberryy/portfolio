@@ -46,17 +46,17 @@ anim.reveal('.skills h3, h4', {
     delay: 500
 });
 
-anim.reveal('.langages div', {
+anim.reveal('.langages', {
     origin: 'left',
     delay: 1000,
     duration: 1200
-}, 500);
+});
 
-anim.reveal('.softwares div', {
+anim.reveal('.softwares', {
     origin: 'left',
     delay: 1500,
     duration: 1200
-}, 500);
+});
 
 // <----- projects section ----->
 anim.reveal('.project-description', {
