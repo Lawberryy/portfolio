@@ -28,7 +28,7 @@ function showSlides(n) {
 }
 
 
-// Section projects : Le contenu affiché change en fonction de la slide 
+// Section projects : Le contenu affiché change en fonction de la slide (1, 2 ou 3)
 
 let listeDots=document.querySelectorAll('.dot');
 
@@ -60,17 +60,17 @@ listeDots.forEach(function(item) {
 
 
 // Modal menu burger déroulant ("curtain menu")
-
+// ouverture du menu burger
 function openNav() {
   document.getElementById("myNav").style.height = "100%";
 }
-
+// fermeture du menu
 function closeNav() {
   document.getElementById("myNav").style.height = "0%";
 }
 
 
-// <----- Typing Animation (h1) ------>
+// <----- Animation texte tapé (h1) ------>
 
 var TxtRotate = function(el, toRotate, period) {
   this.toRotate = toRotate;
