@@ -3,9 +3,9 @@
 let slideIndex = 1;
 showSlides(slideIndex);
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+// function plusSlides(n) {
+//   showSlides(slideIndex += n);
+// }
 
 function currentSlide(n) {
   showSlides(slideIndex = n);
@@ -69,12 +69,8 @@ function closeNav() {
   document.getElementById("myNav").style.height = "0%";
 }
 
-// function closeNavOnClick() {
 
-// }
-
-
-// <----- Animation typing ------>
+// <----- Typing Animation (h1) ------>
 
 var TxtRotate = function(el, toRotate, period) {
   this.toRotate = toRotate;

@@ -28,7 +28,7 @@
             "@type": "Organization",
             "name": "Sixtine Delvallée",
             "url": "https://portfolio-lawberryy.vercel.app/",
-            "logo": "https://portfolio-lawberryy.vercel.app/media/logo-SD-degrade.png"
+            "logo": "https://portfolio-lawberryy.vercel.app/media/logo-SD-degrade.webp"
         },
         {
             "@context": "https://schema.org",
@@ -103,7 +103,8 @@
                 <a href="https://www.linkedin.com/in/sixtine-delvallee/" target="_blank" title="LinkedIn"><i class="fa fa-linkedin-square"></i></a>
                 <a href="https://github.com/Lawberryy" target="_blank" title="Github"><i class="fa fa-github"></i></a>
             </div>
-            <!-- menu burger pour responsive design -->
+
+            <!-- menu burger - responsive design -->
             <!-- overlay -->
             <div id="myNav" class="overlay">
 
@@ -112,17 +113,17 @@
             
                 <!-- Contenu de l'overlay -->
                 <div class="overlay-content">
-                    <a href="#home" title="Home">Home</a>
-                    <a href="#about-me" title="About Me">About Me</a>
-                    <a href="#projects" title="Projects">Projects</a>
-                    <a href="#contact" title="Contact">Contact</a>
+                    <a href="#home" title="Home" onclick="closeNav()">Home</a>
+                    <a href="#about-me" title="About Me" onclick="closeNav()">About Me</a>
+                    <a href="#projects" title="Projects" onclick="closeNav()">Projects</a>
+                    <a href="#contact" title="Contact" onclick="closeNav()">Contact</a>
                 </div>
                 
                 <div class="socials-burger">
                     <a href="mailto:sixtine.delvallee@gmail.com" title="Send me an email"><i class="fa fa-envelope"></i></a>
                     <div class="rightside-socials">
-                        <a href="https://www.linkedin.com/in/sixtine-delvallee/" title="LinkedIn"><i class="fa fa-linkedin-square"></i></a>
-                        <a href="https://github.com/Lawberryy" title="Github"><i class="fa fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/sixtine-delvallee/" title="LinkedIn" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                        <a href="https://github.com/Lawberryy" title="Github" target="_blank"><i class="fa fa-github"></i></a>
                     </div>
                 </div>
             </div>
@@ -161,6 +162,7 @@
                     </div>
                 </div>
 
+                <!-- mouse icon - scroll animation -->
                 <div class="icon-scroll">
                     <a href="#about-me">
                         <div class="mouse">
@@ -177,8 +179,8 @@
                     <h2>About me</h2>
                 </section>
                 <div class="am-description">
-                    <p>Hello! My name is Sixtine, I'm a French sophomore student in coding & digital innovation at IIM Digital School in Paris. I've been interested in web development for more than a year now and I aspire to become a full-stack web developer by the end of my studies. For now, I'm more comfortable with frontend langages.</p>
-                    <p>Apart from my studies in coding, I have several hobbies as well. I recently started taking interest in learning the korean & japanese langages. Their music, animation and film culture is what pushed me in that direction. I also like traveling, playing video games and reading on my free time.</p>
+                    <p>Hello! My name is Sixtine, I'm a French sophomore student in coding & digital innovation at IIM Digital School in Paris. I've been interested in web development for more than a year now and I aspire to become a full-stack web developer by the end of my studies. For now, I'm more comfortable with frontend languages.</p>
+                    <p>Apart from my studies in coding, I have several hobbies as well. I recently started taking interest in learning the korean & japanese languages. Their music, animation and film culture is what pushed me in that direction. I also like traveling, playing video games and reading on my free time.</p>
                 </div>
                 <section class="skills">
                     <h3>Skills</h3>
@@ -261,7 +263,7 @@
                             <div>
                                 <p>This website is a project that I worked on earlier this year to experience using SCSS for the first time. We had an imposed theme for this project: the website had to present a monument or an iconic place/building in Paris.</p>
                                 <p>I chose the Louis Vuitton Fondation because I find its design & architecture really interesting.</p>
-                                <p>This project helped me experience using SCSS, a useful extension of the CSS langage. It helped me organize my files better with the 7-1 architecture.</p>
+                                <p>This project helped me experience using SCSS, a useful extension of the CSS language. It helped me organize my files better with the 7-1 architecture.</p>
                             </div>
                             <a href="https://fondation-louis-vuitton.vercel.app/" class="more" target="_blank">See the project</a>
                         </section>
@@ -269,7 +271,7 @@
                         <section class="pd pd3">
                             <h3>Novatech</h3>
                             <div>
-                                <p>Novatech is another project that I worked on last year during my freshman year. </p>
+                                <p>Novatech is another project that I worked on during my freshman year. I had to use all the languages that I got to discover during the year : HTML, CSS, JS, PHP.</p>
                                 <p>Novatech is a brand of smart clothing, more specificly smart & connected t-shirts. It aspires to help people take care of their health, and in particular their sleeping habits. The cloth can be worn during exercising or sleeping and it will analyze your physical condition.</p>
                                 <p>I had to do everything from creating the concept, the marketing strategy, to the graphic charter of the brand and most importantly the website itself. It was pretty challenging but also very rewarding. It definitely helped me improve my ability to work autonomously.</p>
                             </div>
@@ -282,21 +284,23 @@
 
                         <div class="slideshow-container">
 
-                            <div class="mySlides fade">
-                                <div class="numbertext">1 / 3</div>
-                                <img src="media/manianim.webp" alt="project1" style="width:100%;">
+                            <div class="container-without-dots">
+                                <div class="mySlides fade">
+                                    <div class="numbertext">1 / 3</div>
+                                    <img src="media/Page-fiche-de-l_anime.webp" alt="project1" style="width:100%;">
+                                </div>
+                                
+                                <div class="mySlides fade">
+                                    <div class="numbertext">2 / 3</div>
+                                    <img src="media/FLV-project.webp" alt="Louis-Vuitton-Fondation" style="width:100%;">
+                                </div>
+                                
+                                <div class="mySlides fade">
+                                    <div class="numbertext">3 / 3</div>
+                                    <img src="media/novatech-project.webp" alt="Novatech" style="width:100%;">
+                                </div>
                             </div>
-                            
-                            <div class="mySlides fade">
-                                <div class="numbertext">2 / 3</div>
-                                <img src="media/flv-9.webp" alt="Louis-Vuitton-Fondation" style="width:100%; max-height: 65vh;">
-                            </div>
-                            
-                            <div class="mySlides fade">
-                                <div class="numbertext">3 / 3</div>
-                                <img src="media/Fichier-17.webp" alt="Novatech" style="width:100%;">
-                            </div>
-                            
+
                             <!-- <a class="prev" title="Previous" onclick="plusSlides(-1)">❮</a>
                             <a class="next" title="Next" onclick="plusSlides(1)">❯</a> -->
                             
@@ -354,7 +358,7 @@
 
         </main>
 
-<!-- <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script> -->
+
 <script src="script.js"></script>
 <script src="scroll-animations.js"></script>
 

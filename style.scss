@@ -71,9 +71,6 @@ header li {
     }
 }
 
-// .nav-pages a:first-child li {
-//     color: #59BCA4;
-// }
 .logo {
     margin-top: 10px;
     height: auto;
@@ -81,6 +78,9 @@ header li {
 
     @include mixins.breakpoint(970px) {
         margin-top: 0px;
+    }
+    @include mixins.bigScreens(1650px) {
+        width: 60px;
     }
 }
 .nom {
@@ -91,6 +91,12 @@ header li {
 
     @include mixins.breakpoint(970px) {
         display: none;
+    }
+}
+
+.nav-pages a {
+    @include mixins.bigScreens(1650px) {
+        font-size: 20px;
     }
 }
 .nav-pages a:hover {
@@ -113,9 +119,16 @@ header li {
     @include mixins.breakpoint(970px) {
         display: none;
     }
+    @include mixins.bigScreens(1650px) {
+        gap: 15px;
+    }
 }
 .nav-social i {
     font-size: 20px;
+
+    @include mixins.bigScreens(1650px) {
+        font-size: 30px;
+    }
 }
 .nav-social i:hover {
     @include mixins.linearGradient();
@@ -244,10 +257,13 @@ h1 {
     letter-spacing: 0.31em;
     padding-top: 20px;
     position: absolute;
+
+    @include mixins.bigScreens(1650px) {
+        font-size: 45px;
+    }
 }
 
 // effet néon
-
 .glow {
     color: #fff;
     animation: glow 1s ease-in-out infinite alternate;
@@ -278,6 +294,10 @@ nav ul {
     justify-content: space-between;
     list-style: none;
     font-size: 18px;
+
+    @include mixins.bigScreens(1300px) {
+        font-size: 22px;
+    }
 }
 
 nav li {
@@ -333,6 +353,9 @@ nav li:hover {
     @include mixins.breakpoint(880px) {
         font-size: 22px;
     }
+    @include mixins.bigScreens(1650px) {
+        font-size: 40px;
+    }
 }
 .sd h2 {
     font-size: 50px;
@@ -343,6 +366,9 @@ nav li:hover {
     @include mixins.breakpoint(880px) {
         font-size: 30px;
         margin-left: 0;
+    }
+    @include mixins.bigScreens(1650px) {
+        font-size: 60px;
     }
 }
 .sd p:last-child {
@@ -356,6 +382,12 @@ nav li:hover {
     }
     @include mixins.breakpoint(880px) {
         font-size: 40px;
+    }
+    @include mixins.bigScreens(1650px) {
+        font-size: 90px;
+    }
+    @include mixins.bigScreens(1850px) {
+        font-size: 100px;
     }
 }
 
@@ -389,6 +421,21 @@ nav li:hover {
         -moz-border-radius: 125px;
         -webkit-border-radius: 125px;
         border-radius: 125px;
+    }
+
+    @include mixins.bigScreens(1300px) {
+        width: 400px; 
+        height: 400px;
+        -moz-border-radius: 200px;
+        -webkit-border-radius: 200px;
+        border-radius: 200px;
+    }
+    @include mixins.bigScreens(1850px) {
+        width: 450px; 
+        height: 450px;
+        -moz-border-radius: 225px;
+        -webkit-border-radius: 225px;
+        border-radius: 225px;
     }
 }
 .image-cercle:hover {
@@ -486,6 +533,10 @@ nav li:hover {
     @include mixins.breakpoint(780px) {
         width: 100%;
     }
+
+    @include mixins.bigScreens(1650px) {
+        font-size: 20px;
+    }
 }
 .am-description p:last-child {
     position: absolute;
@@ -504,9 +555,13 @@ nav li:hover {
 .skills h3 {
     font-size: 55px;
     text-transform: uppercase;
+    margin-top: 20px;
 
     @include mixins.breakpoint(1060px) {
         font-size: 50px;
+    }
+    @include mixins.bigScreens(1650px) {
+        margin-top: 50px;
     }
 }
 .section-skills {
@@ -523,6 +578,9 @@ nav li:hover {
 
     @include mixins.breakpoint(1060px) {
         font-size: 52px;
+    }
+    @include mixins.bigScreens(1650px) {
+        font-size: 70px;
     }
 }
 
@@ -559,6 +617,9 @@ nav li:hover {
 }
 .langages div:hover {
     transform: scale(1.2);
+}
+h5 {
+    margin-top: 10px;
 }
 
 .skills2 {
@@ -638,6 +699,8 @@ h4 {
 .project-description {
     width: 50%;
     position: relative;
+    display: flex;
+    align-items: center;
 
     @include mixins.breakpoint(780px) {
         width: 100%;
@@ -651,6 +714,9 @@ h4 {
     @include mixins.breakpoint(1150px) {
         font-size: 14px;
     }
+    @include mixins.bigScreens(1650px) {
+        font-size: 20px;
+    }
 }
 .project-description h3 {
     font-style: italic;
@@ -663,6 +729,9 @@ h4 {
     @include mixins.breakpoint(1150px) {
         font-size: 35px;
     }
+    @include mixins.bigScreens(1650px) {
+        font-size: 50px;
+    }
 }
 .pd {
     display: none;
@@ -672,6 +741,9 @@ h4 {
 }
 .pd-active {
     display: block;
+
+    display: flex;
+    flex-direction: column;
 }
 .more {
     border: none;
@@ -679,8 +751,6 @@ h4 {
     border-radius: 10px;
     padding: 5px 0px 5px 0px;
     background: linear-gradient(100deg, #A42C95 30.5%, #59BCA4 71.46%);
-    position: absolute;
-    bottom: 5px;
     width: 30%;
     margin-left: 35%;
     text-align: center;
@@ -693,7 +763,6 @@ h4 {
 }
 .projects-swiper {
     width: 45%;
-    overflow: hidden;
     display: flex;
 
     @include mixins.breakpoint(780px) {
@@ -701,12 +770,14 @@ h4 {
         margin-bottom: 30px;
     }
 }
-
+.container-without-dots {
+    overflow: auto;
+    height: 65vh;
+    border-radius: 20px;
+}
 
 // swiper projects
 
-* {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
 .mySlides {display: none}
 img {vertical-align: middle;}
 
@@ -763,6 +834,7 @@ img {vertical-align: middle;}
     position: absolute;
     top: 0;
     background-color: black;
+    border-top-left-radius: 20px;
 }
 
 /* The dots/bullets/indicators */
@@ -771,13 +843,10 @@ img {vertical-align: middle;}
     height: 12px;
     width: 12px;
     margin: 0 2px;
-    background-color: #080D17;
+    background-color: #EAEAEA;
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
-
-//   position: absolute;
-//   bottom: 8px;
 }
 
 .active, .dot:hover {
@@ -833,6 +902,9 @@ img {vertical-align: middle;}
     @include mixins.breakpoint(780px) {
         font-size: 17px;
     }
+    @include mixins.bigScreens(1650px) {
+        font-size: 26px;
+    }
 }
 
 .contact-title-section {
@@ -872,6 +944,9 @@ h2 {
     @include mixins.breakpoint(780px) {
         font-size: 40px;
     }
+    @include mixins.bigScreens(1650px) {
+        font-size: 60px;
+    }
 }
 
 .contact-info {
@@ -896,9 +971,16 @@ h2 {
     @include mixins.breakpoint(780px) {
         font-size: 50px;
     }
+    @include mixins.bigScreens(1650px) {
+        font-size: 90px;
+    }
 }
 .card p {
     font-size: 18px;
+
+    @include mixins.bigScreens(1650px) {
+        font-size: 22px;
+    }
 }
 .card i:hover {
     @include mixins.linearGradient();
@@ -933,6 +1015,9 @@ h2 {
         right: 0;
         margin-top: 30px;
         text-align: center;
+    }
+    @include mixins.bigScreens(1850px) {
+        font-size: 15px;
     }
 }
 

@@ -83,6 +83,11 @@ header li {
     margin-top: 0px;
   }
 }
+@media screen and (min-width: 1650px) {
+  .logo {
+    width: 60px;
+  }
+}
 
 .nom {
   text-transform: uppercase;
@@ -93,6 +98,12 @@ header li {
 @media screen and (max-width: 970px) {
   .nom {
     display: none;
+  }
+}
+
+@media screen and (min-width: 1650px) {
+  .nav-pages a {
+    font-size: 20px;
   }
 }
 
@@ -118,9 +129,19 @@ header li {
     display: none;
   }
 }
+@media screen and (min-width: 1650px) {
+  .nav-social {
+    gap: 15px;
+  }
+}
 
 .nav-social i {
   font-size: 20px;
+}
+@media screen and (min-width: 1650px) {
+  .nav-social i {
+    font-size: 30px;
+  }
 }
 
 .nav-social i:hover {
@@ -274,6 +295,11 @@ h1 {
   padding-top: 20px;
   position: absolute;
 }
+@media screen and (min-width: 1650px) {
+  h1 {
+    font-size: 45px;
+  }
+}
 
 .glow {
   color: #fff;
@@ -305,6 +331,11 @@ nav ul {
   justify-content: space-between;
   list-style: none;
   font-size: 18px;
+}
+@media screen and (min-width: 1300px) {
+  nav ul {
+    font-size: 22px;
+  }
 }
 
 nav li {
@@ -374,6 +405,11 @@ nav li:hover {
     font-size: 22px;
   }
 }
+@media screen and (min-width: 1650px) {
+  .sd p:first-child {
+    font-size: 40px;
+  }
+}
 
 .sd h2 {
   font-size: 50px;
@@ -387,6 +423,11 @@ nav li:hover {
   .sd h2 {
     font-size: 30px;
     margin-left: 0;
+  }
+}
+@media screen and (min-width: 1650px) {
+  .sd h2 {
+    font-size: 60px;
   }
 }
 
@@ -404,6 +445,16 @@ nav li:hover {
 @media screen and (max-width: 880px) {
   .sd p:last-child {
     font-size: 40px;
+  }
+}
+@media screen and (min-width: 1650px) {
+  .sd p:last-child {
+    font-size: 90px;
+  }
+}
+@media screen and (min-width: 1850px) {
+  .sd p:last-child {
+    font-size: 100px;
   }
 }
 
@@ -439,6 +490,24 @@ nav li:hover {
     -moz-border-radius: 125px;
     -webkit-border-radius: 125px;
     border-radius: 125px;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .image-cercle {
+    width: 400px;
+    height: 400px;
+    -moz-border-radius: 200px;
+    -webkit-border-radius: 200px;
+    border-radius: 200px;
+  }
+}
+@media screen and (min-width: 1850px) {
+  .image-cercle {
+    width: 450px;
+    height: 450px;
+    -moz-border-radius: 225px;
+    -webkit-border-radius: 225px;
+    border-radius: 225px;
   }
 }
 
@@ -551,6 +620,11 @@ nav li:hover {
     width: 100%;
   }
 }
+@media screen and (min-width: 1650px) {
+  .am-description p {
+    font-size: 20px;
+  }
+}
 
 .am-description p:last-child {
   position: absolute;
@@ -571,10 +645,16 @@ nav li:hover {
 .skills h3 {
   font-size: 55px;
   text-transform: uppercase;
+  margin-top: 20px;
 }
 @media screen and (max-width: 1060px) {
   .skills h3 {
     font-size: 50px;
+  }
+}
+@media screen and (min-width: 1650px) {
+  .skills h3 {
+    margin-top: 50px;
   }
 }
 
@@ -595,6 +675,11 @@ nav li:hover {
 @media screen and (max-width: 1060px) {
   .section-skills i {
     font-size: 52px;
+  }
+}
+@media screen and (min-width: 1650px) {
+  .section-skills i {
+    font-size: 70px;
   }
 }
 
@@ -640,6 +725,10 @@ nav li:hover {
 
 .langages div:hover {
   transform: scale(1.2);
+}
+
+h5 {
+  margin-top: 10px;
 }
 
 .skills2 {
@@ -735,6 +824,8 @@ h4 {
 .project-description {
   width: 50%;
   position: relative;
+  display: flex;
+  align-items: center;
 }
 @media screen and (max-width: 780px) {
   .project-description {
@@ -752,6 +843,11 @@ h4 {
     font-size: 14px;
   }
 }
+@media screen and (min-width: 1650px) {
+  .project-description p {
+    font-size: 20px;
+  }
+}
 
 .project-description h3 {
   font-style: italic;
@@ -766,6 +862,11 @@ h4 {
     font-size: 35px;
   }
 }
+@media screen and (min-width: 1650px) {
+  .project-description h3 {
+    font-size: 50px;
+  }
+}
 
 .pd {
   display: none;
@@ -777,6 +878,8 @@ h4 {
 
 .pd-active {
   display: block;
+  display: flex;
+  flex-direction: column;
 }
 
 .more {
@@ -785,8 +888,6 @@ h4 {
   border-radius: 10px;
   padding: 5px 0px 5px 0px;
   background: linear-gradient(100deg, #A42C95 30.5%, #59BCA4 71.46%);
-  position: absolute;
-  bottom: 5px;
   width: 30%;
   margin-left: 35%;
   text-align: center;
@@ -801,7 +902,6 @@ h4 {
 
 .projects-swiper {
   width: 45%;
-  overflow: hidden;
   display: flex;
 }
 @media screen and (max-width: 780px) {
@@ -811,13 +911,10 @@ h4 {
   }
 }
 
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Verdana, sans-serif;
-  margin: 0;
+.container-without-dots {
+  overflow: auto;
+  height: 65vh;
+  border-radius: 20px;
 }
 
 .mySlides {
@@ -847,6 +944,7 @@ img {
   position: absolute;
   top: 0;
   background-color: black;
+  border-top-left-radius: 20px;
 }
 
 /* The dots/bullets/indicators */
@@ -855,7 +953,7 @@ img {
   height: 12px;
   width: 12px;
   margin: 0 2px;
-  background-color: #080D17;
+  background-color: #EAEAEA;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
@@ -917,6 +1015,11 @@ img {
     font-size: 17px;
   }
 }
+@media screen and (min-width: 1650px) {
+  .contact-intro {
+    font-size: 26px;
+  }
+}
 
 .contact-title-section {
   display: flex;
@@ -964,6 +1067,11 @@ h2 {
     font-size: 40px;
   }
 }
+@media screen and (min-width: 1650px) {
+  .contact-main h3 {
+    font-size: 60px;
+  }
+}
 
 .contact-info {
   display: flex;
@@ -992,9 +1100,19 @@ h2 {
     font-size: 50px;
   }
 }
+@media screen and (min-width: 1650px) {
+  .card i {
+    font-size: 90px;
+  }
+}
 
 .card p {
   font-size: 18px;
+}
+@media screen and (min-width: 1650px) {
+  .card p {
+    font-size: 22px;
+  }
 }
 
 .card i:hover {
@@ -1041,6 +1159,11 @@ h2 {
     right: 0;
     margin-top: 30px;
     text-align: center;
+  }
+}
+@media screen and (min-width: 1850px) {
+  .copyright {
+    font-size: 15px;
   }
 }
 
