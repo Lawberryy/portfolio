@@ -111,6 +111,11 @@ header li {
   color: #59BCA4;
 }
 
+.nav-pages hr {
+  width: 100%;
+  height: 2px;
+}
+
 @media screen and (max-width: 970px) {
   .nav-pages {
     display: none;
