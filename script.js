@@ -55,6 +55,14 @@ listeDots.forEach(function(item) {
             let desc3=document.querySelector('.pd3');
             desc3.classList.add('pd-active');
         }
+        if(this.classList.contains('dot-4')) {
+          let desc4=document.querySelector('.pd4');
+          desc4.classList.add('pd-active');
+        }
+        if(this.classList.contains('dot-5')) {
+          let desc5=document.querySelector('.pd5');
+          desc5.classList.add('pd-active');
+        }
     })
 })
 
