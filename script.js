@@ -28,7 +28,7 @@ function showSlides(n) {
 }
 
 
-// Section projects : Le contenu affiché change en fonction de la slide (1, 2 ou 3)
+// Section projects : Le contenu affiché change en fonction de la slide
 
 let listeDots=document.querySelectorAll('.dot');
 
@@ -62,6 +62,10 @@ listeDots.forEach(function(item) {
         if(this.classList.contains('dot-5')) {
           let desc5=document.querySelector('.pd5');
           desc5.classList.add('pd-active');
+        }
+        if(this.classList.contains('dot-6')) {
+          let desc6=document.querySelector('.pd6');
+          desc6.classList.add('pd-active');
         }
     })
 })

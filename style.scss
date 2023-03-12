@@ -589,6 +589,7 @@ nav li:hover {
 
 .skills1 {
     width: 45%;
+    flex-wrap: wrap;
 
     @include mixins.breakpoint(780px) {
         width: 100%;
@@ -627,6 +628,7 @@ h5 {
 
 .skills2 {
     width: 40%;
+    flex-wrap: wrap;
 
     @include mixins.breakpoint(780px) {
         width: 100%;
