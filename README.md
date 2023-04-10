@@ -1,6 +1,6 @@
-# Mon portfolio
+# My portfolio
 
-✍️ I am re-editing my README page 
+✍️ Currently re-editing my README page 
 
 <!-- 
 ### Here are the steps that I followed for this project :
