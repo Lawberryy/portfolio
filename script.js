@@ -67,6 +67,10 @@ listeDots.forEach(function(item) {
           let desc6=document.querySelector('.pd6');
           desc6.classList.add('pd-active');
         }
+        if(this.classList.contains('dot-7')) {
+          let desc7=document.querySelector('.pd7');
+          desc7.classList.add('pd-active');
+        }
     })
 })
 
